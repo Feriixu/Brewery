@@ -129,7 +129,9 @@ public class DistortChat {
 	// Distort players words when he talks
 	public static void playerChat(AsyncPlayerChatEvent event) {
 		BPlayer bPlayer = BPlayer.get(event.getPlayer());
-		if (bPlayer != null) {
+		if (bPlayer == null) {
+			bPlayer = new BPlayer(event.getPlayer().getUniqueId().toString());
+		}
 			if (!words.isEmpty()) {
 				String message = event.getMessage();
 				if (log) {
@@ -146,7 +148,6 @@ public class DistortChat {
 
 				event.setMessage(distorted);
 			}
-		}
 	}
 
 	// distorts a message, ignoring text enclosed in ignoreText letters
