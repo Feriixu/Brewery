@@ -52,6 +52,8 @@ drainItems:
 # Show Particles over Cauldrons when they have ingredients and a heat source. [true]
 # The changing color of the particles can help with timing some recipes
 enableCauldronParticles: true
+# If Cauldron Particles should be reduced to the bare minimum [false]
+minimalParticles: false
 
 # If crafting and using of the Brew Sealing Table is enabled (2 Bottles over 4 Planks) [true, true]
 craftSealingTable: true
@@ -87,7 +89,7 @@ autosave: 3
 debug: false
 
 # Versione del config
-version: '3.0'
+version: '3.1'
 
 
 
@@ -739,6 +741,7 @@ recipes:
     cookingtime: 2
     color: BLACK
     difficulty: 3
+    alcohol: -6
     lore: + &8Probably a week old
     effects:
       - REGENERATION/1/2-5
@@ -816,6 +819,7 @@ eggnog:
   #   cookingtime: 1
   #   color: BLACK
   #   difficulty: 4
+  #   alcohol: -8
   #   effects:
   #     - REGENERATION/30
   #     - SPEED/10
@@ -838,7 +842,7 @@ eggnog:
 # Pumpkin Spice Beer,
 # Melon Vodka
 
-# There are a lot of items in Minecraft like Vines and items added by plugins that would make great ingredients.
+# There are a lot of items in Minecraft like Vines, Milk and items added by plugins that would make great ingredients.
 
 
 # -- Compatibilità con altri plugin --
@@ -895,8 +899,8 @@ colorInBrewer: true
 # Se un barile grande può essere aperto  cliccandoci sopra, non solo sul cartello e sulla staccionata. Questo è sempre true per i barili piccoli. [true]
 openLargeBarrelEverywhere: true
 
-# If Cauldron Particles should be reduced to the bare minimum [false]
-minimalParticles: false
+# Allow emptying brews into hoppers to discard brews while keeping the glass bottle [true]
+brewHopperDump: true
 
 
 # -- Imostazioni di distorsione della chat --

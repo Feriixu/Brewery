@@ -52,6 +52,8 @@ drainItems:
 # Partikel steigen von Kesseln auf wenn sie Zutaten und eine Feuerquelle haben [true]
 # Die sich ändernde Farbe der Partikel kann beim Fermentieren mancher Rezepte helfen
 enableCauldronParticles: true
+# Ob nur ein Minimum an Kessel-Partikeln dargestellt werden sollen [false]
+minimalParticles: false
 
 # Ob das craften und das benutzen des Trank-Versiegelungs-Tisches aktiviert ist (2 Flaschen über 4 Holz) [true, true]
 craftSealingTable: true
@@ -86,7 +88,7 @@ autosave: 3
 debug: false
 
 # Config Version
-version: '3.0'
+version: '3.1'
 
 
 
@@ -740,6 +742,7 @@ recipes:
     cookingtime: 2
     color: BLACK
     difficulty: 3
+    alcohol: -6
     lore: + &8Bestimmt schon eine Woche alt
     effects:
       - REGENERATION/1/2-5
@@ -821,6 +824,7 @@ recipes:
   #   cookingtime: 1
   #   color: BLACK
   #   difficulty: 4
+  #   alcohol: -8
   #   effects:
   #     - REGENERATION/30
   #     - SPEED/10
@@ -843,7 +847,7 @@ recipes:
 # Pumpkin Spice Bier,
 # Melonen Vodka
 
-# Es gibt noch viele Minecraft Items wie Ranken und items von anderen plugins die sich gut als Zutaten machen würden
+# Es gibt noch viele Minecraft Items wie Ranken, Milch und items von anderen plugins die sich gut als Zutaten machen würden
 
 
 
@@ -903,8 +907,8 @@ colorInBrewer: true
 # Ob große Fässer an jedem Block geöffnet werden können, nicht nur an Zapfhahn und Schild. Bei kleinen Fässern geht dies immer. [true]
 openLargeBarrelEverywhere: true
 
-# Ob nur ein Minimum an Kessel-Partikeln dargestellt werden sollen [false]
-minimalParticles: false
+# Ob das Entleeren von Brewery Tränken mit Hilfe von Trichtern möglich ist, um die Glasflasche zurück zu bekommen [true]
+brewHopperDump: true
 
 
 # -- Chat Veränderungs Einstellungen --
